@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>MT414 - Workflow and Data Management</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Damien Dupré - Dublin City University" />
+    <script src="libs/header-attrs-2.25/header-attrs.js"></script>
+    <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link href="libs/remark-css-0.0.1/metropolis.css" rel="stylesheet" />
+    <link href="libs/remark-css-0.0.1/metropolis-fonts.css" rel="stylesheet" />
+    <link href="libs/font-awesome-animation-1.0/font-awesome-animation-emi.css" rel="stylesheet" />
+    <script src="libs/fontawesome-5.0.13/js/fontawesome-all.min.js"></script>
+    <link href="libs/countdown-0.4.0/countdown.css" rel="stylesheet" />
+    <script src="libs/countdown-0.4.0/countdown.js"></script>
+    <link rel="stylesheet" href="css/custom_design.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+.title[
+# MT414 - Workflow and Data Management
+]
+.subtitle[
+## Publish your Markdown+Code with GitHub
+]
+.author[
+### Damien Dupré - Dublin City University
+]
+
+---
+
+
+
+
+# Objectives for Today
+
+--
+
+### 1. Create a html pages from your notebooks
+
+--
+
+### 2. Host your html pages on GitHub
+
+--
+
+### 3. Publish your html pages with GitHub pages
+
+--
+
+### Objectives for Next Week:
+- ### Creating a website
+- ### Hosting the website with GitHub
+- ### Modifying the website
+
+---
+
+# Requirements
+
+### 1. Find these slides @: 
+### https://damien-dupre.github.io/mt414/lecture_1
+
+--
+
+### 2. Open **jupyter** either on your local computer or online @:
+### https://mybinder.org/v2/gh/ipython/ipython-in-depth/HEAD
+
+--
+
+### Any questions?
+
+--
+
+### .center[**Then, it's time to enter ...**]
+.center[
+&lt;img src="https://raw.githubusercontent.com/damien-dupre/img/main/the_matrix.gif" width="40%" /&gt;
+]
+
+---
+class: inverse, mline, center, middle
+
+# 1. Create a html pages from your notebooks
+
+---
+
+# Rendering notebooks
+
+- ### Code files (like .py or .r) only contain code plus comments introduced by `#`
+
+- ### Notebook files (like .ipynb, .Rmd, or .qmd) can contain both text and code.
+
+- ### Rendering a notebook, is the activity of creating a shareable report from your notebook 
+
+- ### Different format are possible: html, pdf, word, ...
+
+- ### The way to format text in a notebook to render it nicely uses a style called **Markdown**
+
+<span>&lt;i class="fas  fa-exclamation-triangle faa-flash animated faa-slow " style=" color:red;"&gt;&lt;/i&gt;</span> **Warning**: you cannot share a notebook files with the format .ipynb, .Rmd, or .qmd, they are only for your own use or a team work.
+
+---
+
+# Markdown: Creating Headings
+
+.pull-left[
+&lt;br&gt;&lt;br&gt;
+### What you type...
+&lt;br&gt;
+```
+# Level 1 heading
+## Level 2 heading
+### Level 3 heading
+
+```
+]
+--
+.pull-right[
+&lt;br&gt;&lt;br&gt;
+### What you get...
+&lt;br&gt;
+
+## Level 1 heading
+### Level 2 heading
+#### Level 3 heading
+]
+
+---
+
+# Markdown: Emphasising Text
+
+.pull-left[
+&lt;br&gt;&lt;br&gt;
+### What you type...
+&lt;br&gt;
+```
+
+this is *italics*
+
+this is **bold**
+
+this is ***bold italics***
+```
+]
+--
+.pull-right[
+&lt;br&gt;&lt;br&gt;
+### What you get...
+&lt;br&gt;
+
+this is *italics*
+
+this is **bold**
+
+this is ***bold italics***
+]
+---
+
+# Markdown: Creating Lists
+
+.pull-left[
+&lt;br&gt;&lt;br&gt;
+### What you type...
+&lt;br&gt;
+```
+- unnumbered lists
+- look like this
+
+1. numbered lists
+2. look like this
+```
+]
+--
+.pull-right[
+&lt;br&gt;&lt;br&gt;
+### What you get...
+&lt;br&gt;
+
+- unnumbered lists
+- look like this
+
+1. numbered lists
+2. look like this
+]
+
+---
+
+# Markdown: Add Images
+
+.pull-left[
+&lt;br&gt;&lt;br&gt;
+### What you type...
+&lt;br&gt;
+```
+![ ](https://i.imgflip.com/3pw1vi.jpg)
+
+```
+]
+--
+.pull-right[
+&lt;br&gt;&lt;br&gt;
+### What you get...
+&lt;br&gt;
+
+![ ](https://i.imgflip.com/3pw1vi.jpg)
+]
+
+---
+
+# Markdown Example
+
+.pull-left[
+
+**Example of a markdown document...**
+
+```
+## Introduction
+
+
+
+Welcome to my **awesome** class. You 
+will learn all kinds of useful things 
+about Data Analytics.
+
+
+- Markdown is simple
+- You can add Python and R code
+- You can add $\LaTeX$ equations
+- you can add images:
+![ ](https://i.imgflip.com/3pw1vi.jpg)
+
+```
+]
+
+.pull-right[
+
+**Here's what the output looks like...**
+
+## Introduction
+Welcome to my **awesome** class. You will learn all kinds of useful things about Data Analytics.
+
+- Markdown is simple
+- You can add Python and R code
+- You can add `\(\LaTeX\)` equations
+- you can add images:
+![ ](https://i.imgflip.com/3pw1vi.jpg)
+
+]
+
+---
+
+# Render a Notebook to html in Jupyter
+
+### Just use `File` &gt; `Download as` &gt; `HTML (.html)`
+
+### And this is it!
+
+![](https://pbs.twimg.com/media/DGNoBBsXgAEH3uK?format=jpg&amp;name=small)&lt;!-- --&gt;
+
+---
+class: title-slide, middle
+
+## Your turn!
+
+.pull-left[
+1/ Create a **New Jupyter Notebook**
+
+2/ Create a **Text cell** which includes:
+```markdown
+## Introduction
+
+Welcome to my **awesome** class. You 
+will learn all kinds of useful things 
+about Data Analytics.
+
+- Markdown is simple
+- You can add Python and R code
+- You can add $\LaTeX$ equations
+- you can add images:
+![ ](https://i.imgflip.com/3pw1vi.jpg)
+
+```
+]
+
+.pull-right[
+3/ Create a **Code cell** with the following code:
+```markdown
+! pip install plotly_express
+import plotly.express as px
+fig = px.scatter(
+  x=[0, 1, 2, 3, 4], 
+  y=[0, 1, 4, 9, 16])
+fig.show()
+```
+
+4/ Run both cells and download the `.html` file
+]
+
+<div class="countdown" id="timer_2099d3a2" data-warn-when="60" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown-controls"><button class="countdown-bump-down">&minus;</button><button class="countdown-bump-up">&plus;</button></div>
+<code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+
+---
+class: inverse, mline, center, middle
+
+# 2. Host your html pages on GitHub
+
+---
+
+# GitHub
+
+#### GitHub has a lot of different functions. For now, we will only see how to use it to **published the html document output from our notebook file**.
+
+![](http://www.quickmeme.com/img/75/7509f68823389e4af3777ca6d3744c632cc32ab3547bc56e319126aa29ab149a.jpg)&lt;!-- --&gt;
+
+---
+
+# What is GitHub
+
+### Primary used to collaborate on code development, it became multi-purpose:
+
+- Version Control
+- File and Code Storage
+- Collaboration Projects
+- Social Media for Developers
+- Online Publication &amp; Website Host
+- Automatic Actions
+
+### And even more that I am not aware of!
+
+---
+
+# What is GitHub
+
+### Primary used to collaborate on code development, it became multi-purpose:
+
+- Version Control
+- **File and Code Storage**
+- Collaboration
+- Developers Social Media
+- **Online Publication &amp; Website Host**
+- Automatic Actions
+
+### And even more that I am not aware of!
+
+---
+class: title-slide, middle
+
+## Your turn!
+
+1/ Go to https://github.com and click **sign in** (or sign up if you haven't already done it)
+
+<span>&lt;i class="fas  fa-exclamation-triangle faa-flash animated faa-slow " style=" color:red;"&gt;&lt;/i&gt;</span> Note: Your user name will become extremely important in your future, `firstname-name` is usually good
+
+<div class="countdown" id="timer_2f4fa42c" data-warn-when="60" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown-controls"><button class="countdown-bump-down">&minus;</button><button class="countdown-bump-up">&plus;</button></div>
+<code class="countdown-time"><span class="countdown-digits minutes">02</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+
+---
+
+# Welcome to GitHub
+
+![](https://miro.medium.com/v2/resize:fit:1400/1*cgJlPulU9t3djbf9TQ5sGA.gif)&lt;!-- --&gt;
+
+---
+
+# How does GitHub Work?
+
+#### The core principle of GitHub is a remote desktop (or profile) with a folder called **Repository** for each project you are working on or you worked on (also called "Repo" if you want to use the slang).
+
+![](https://raw.githubusercontent.com/damien-dupre/img/main/github_dd_profile.png)&lt;!-- --&gt;
+
+---
+class: title-slide, middle
+
+## Your turn!
+
+Follow the steps here after to **create your first repository**.
+
+---
+
+# GitHub Repositories
+
+[To create a Repository](https://docs.github.com/en/get-started/quickstart/create-a-repo):
+
+1/ In the upper-right corner of any page, use the `+` drop-down menu, and select New repository.
+
+![](https://docs.github.com/assets/cb-11427/mw-1000/images/help/repository/repo-create.webp)&lt;!-- --&gt;
+
+---
+
+# GitHub Repositories
+
+![](https://git-scm.com/book/en/v2/images/newrepoform.png)&lt;!-- --&gt;
+
+---
+
+# GitHub Repositories
+
+2/ **Type a short, memorable name** for your repository. For example, "hello-world".
+
+![](https://docs.github.com/assets/cb-61138/mw-1440/images/help/repository/create-repository-name.webp)&lt;!-- --&gt;
+
+3/ **Optionally**, add a description of your repository. For example, "My first repository on GitHub." 
+
+
+---
+
+# GitHub Repositories
+
+4/ **Choose a PUBLIC repository visibility**. For more information, see "About repositories." 
+
+5/ Tick **Add a README file**.
+
+6/ Click **Create repository**.
+
+### Congratulations! You've successfully created your first repository, and initialized it with a README file.
+
+.center[
+&lt;img src="https://external-preview.redd.it/H3X9ghkU1diDoEaB2j6OLakfRVvtelkI-VVCAMvpHFw.jpg?auto=webp&amp;s=812777b2de31ed351475ecfb9cfe91a74931201b" width="50%" /&gt;
+]
+
+---
+
+# Always Commit Changes
+
+In GitHub, a commit is a saved change to a project's source code or other files. When you make changes to a file in a GitHub repository, you create a new version of that file. 
+
+**A commit contains a snapshot of the changes** you've made to one or more files, along with a message that describes the changes. This **message should be descriptive and clear**, so that other developers can understand what changes you've made and why.
+
+### Everytime you want to take into account a change in your repository, you need to commit these changes
+
+---
+class: title-slide, middle
+
+## Your turn!
+
+When you created your new repository, you initialized it with a README file. README files are a great place to describe your project in more detail, or add some documentation such as how to install or use your project. The contents of your README file are automatically shown on the front page of your repository.
+
+**Follow the steps here after to commit a change to the README file.**
+
+---
+
+# Commit the First Change
+
+1/ In your repository's list of files, **click README.md**. 
+
+&lt;img src="https://docs.github.com/assets/cb-21025/mw-1440/images/help/repository/create-commit-open-readme.webp" width="50%" /&gt;
+
+---
+
+# Commit the First Change
+
+2/ In the upper right corner of the file view, **click the pen icon to open the file editor**.
+
+&lt;img src="https://docs.github.com/assets/cb-47677/mw-1440/images/help/repository/edit-file-edit-button.webp" width="80%" /&gt;
+
+3/ In the text box, **type some information about the project**.
+
+4/ Above the new content, click **Preview**.
+
+&lt;img src="https://docs.github.com/assets/cb-35443/mw-1440/images/help/repository/edit-readme-preview-changes.webp" width="80%" /&gt;
+
+---
+
+# Commit the First Change
+
+.pull-left[
+5/ **Review the changes** you made to the file. You will see the new content in green.
+
+6/ Click **Commit changes...**
+
+7/ In the "Commit message" field, type a short, meaningful **commit message** that describes the change you made to the file. 
+]
+
+.pull-right[
+![](https://docs.github.com/assets/cb-33561/mw-1000/images/help/repository/create-commit-review.webp)&lt;!-- --&gt;
+]
+
+8/ Below the commit message fields, decide whether to add your commit to the current branch or to a new branch. Select **commit directly to the `main` branch** for now. 
+
+<span>&lt;i class="fas  fa-exclamation-triangle faa-flash animated faa-slow " style=" color:red;"&gt;&lt;/i&gt;</span> Warning: For collaborative projects never commit to the main branch
+
+9/ Click **Propose file change**.
+
+---
+class: title-slide, middle
+
+## Your turn!
+
+1/ In your Repository Page in GitHub, Click `Add files` then on `Upload files`
+
+2/ **Drop** or **choose** your html file in the main box and **commit your changes**
+
+<div class="countdown" id="timer_9fb9b8c0" data-warn-when="60" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown-controls"><button class="countdown-bump-down">&minus;</button><button class="countdown-bump-up">&plus;</button></div>
+<code class="countdown-time"><span class="countdown-digits minutes">02</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+
+---
+
+# GitHub Pages
+
+GitHub Pages is a **web hosting service** offered by GitHub that allows you to host static websites directly from a GitHub repository. This means you can use GitHub to store and version control your website's code, and then host it for free using GitHub Pages.
+
+Your website will then be published at a URL based on your GitHub username and repository name (e.g., **username.github.io/repository**).
+
+&lt;img src="https://miro.medium.com/v2/resize:fit:1400/format:webp/1*uHia-SKJPkWqbxbGJPfCCA.jpeg" width="50%" /&gt;
+
+---
+class: title-slide, middle
+
+## Your turn!
+
+Turn on GitHub Pages for your project repository:
+
+1/ Go to **Settings** and find **Pages** on the left pane
+
+2/ In **Branch**, instead of None select **Main** and click **Save**
+
+3/ Click on **Actions** and wait that "pages build and deployment" finishes. 
+
+4/When it's done, go to **https://username.github.io/repository/nameofyourfile.html**
+
+---
+class: inverse, mline, left, middle
+
+&lt;img class="circle" src="https://github.com/damien-dupre.png" width="250px"/&gt;
+
+# Thanks for your attention and don't hesitate to ask if you have any questions!
+
+[<svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg> @damien_dupre](http://twitter.com/damien_dupre)  
+[<svg aria-hidden="true" role="img" viewBox="0 0 496 512" style="height:1em;width:0.97em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg> @damien-dupre](http://github.com/damien-dupre)  
+[<svg aria-hidden="true" role="img" viewBox="0 0 640 512" style="height:1em;width:1.25em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M579.8 267.7c56.5-56.5 56.5-148 0-204.5c-50-50-128.8-56.5-186.3-15.4l-1.6 1.1c-14.4 10.3-17.7 30.3-7.4 44.6s30.3 17.7 44.6 7.4l1.6-1.1c32.1-22.9 76-19.3 103.8 8.6c31.5 31.5 31.5 82.5 0 114L422.3 334.8c-31.5 31.5-82.5 31.5-114 0c-27.9-27.9-31.5-71.8-8.6-103.8l1.1-1.6c10.3-14.4 6.9-34.4-7.4-44.6s-34.4-6.9-44.6 7.4l-1.1 1.6C206.5 251.2 213 330 263 380c56.5 56.5 148 56.5 204.5 0L579.8 267.7zM60.2 244.3c-56.5 56.5-56.5 148 0 204.5c50 50 128.8 56.5 186.3 15.4l1.6-1.1c14.4-10.3 17.7-30.3 7.4-44.6s-30.3-17.7-44.6-7.4l-1.6 1.1c-32.1 22.9-76 19.3-103.8-8.6C74 372 74 321 105.5 289.5L217.7 177.2c31.5-31.5 82.5-31.5 114 0c27.9 27.9 31.5 71.8 8.6 103.9l-1.1 1.6c-10.3 14.4-6.9 34.4 7.4 44.6s34.4 6.9 44.6-7.4l1.1-1.6C433.5 260.8 427 182 377 132c-56.5-56.5-148-56.5-204.5 0L60.2 244.3z"/></svg> damien-datasci-blog.netlify.app](https://damien-datasci-blog.netlify.app)  
+[<svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M16.1 260.2c-22.6 12.9-20.5 47.3 3.6 57.3L160 376V479.3c0 18.1 14.6 32.7 32.7 32.7c9.7 0 18.9-4.3 25.1-11.8l62-74.3 123.9 51.6c18.9 7.9 40.8-4.5 43.9-24.7l64-416c1.9-12.1-3.4-24.3-13.5-31.2s-23.3-7.5-34-1.4l-448 256zm52.1 25.5L409.7 90.6 190.1 336l1.2 1L68.2 285.7zM403.3 425.4L236.7 355.9 450.8 116.6 403.3 425.4z"/></svg> damien.dupre@dcu.ie](mailto:damien.dupre@dcu.ie)
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="libs/cols_macro.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "zenburn",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
